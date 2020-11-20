@@ -71,16 +71,16 @@ void ledPulse::updatePulse() {
 
 void ledPulse::reinitPulse() {
   HSV.hue = (uint16_t)random(0, 255);
-  HSV.saturation = (uint16_t)random(10, 255);
+  HSV.saturation = (uint16_t)random(127, 255);
   HSV.brightness = (uint16_t)random(100, 255);
   pos = 0;
   start = 0;
   end = 0;
-  length = (uint8_t)random(3, (NUM_LEDS / 4));
+  length = (uint8_t)random(4, (NUM_LEDS / 3));
   if ((length % 2) == 1) {
     length++;
   }
-  time_step = (uint16_t)random(10, 200);
+  time_step = (uint16_t)random(10, 80);
   last_update_time = 0;
   marked_active = false;
   marked_for_deletion = false;

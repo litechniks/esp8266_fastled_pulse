@@ -11,10 +11,10 @@
 #include "pulse.h"
 
 
-#define NUM_LEDS 60           //Number of LEDs in the strip, min 12 pcs
+#define NUM_LEDS 180           //Number of LEDs in the strip, min 12 pcs
 #define DATA_PIN 5            //Data pin on the controller
 #define CLOCK_PIN 13          //Not needed for WS2815
-#define DEBUG                 //To see a representation of the pulses in the Serial Monitor (ruins performance)
+//#define DEBUG                 //To see a representation of the pulses in the Serial Monitor (ruins performance)
 
 CRGB global_leds[NUM_LEDS];   //global variable that holds the values of the LEDs
 uint32_t system_time;         //used for timing of th debugging mesages
